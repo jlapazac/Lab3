@@ -22,4 +22,11 @@
         android:name="com.example.lab3.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_pedidos"
+        android:name="com.example.lab3.ui.pedidos.PedidosFragment"
+        android:label="@string/menu_pedidos"
+        tools:layout="@layout/pedidos_fragment" />
+
 </navigation>
