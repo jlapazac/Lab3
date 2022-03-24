@@ -18,11 +18,13 @@ import android.widget.TextView;
 import com.example.lab3.MainActivity;
 import com.example.lab3.R;
 import com.example.lab3.databinding.FragmentHomeBinding;
+import com.example.lab3.databinding.PedidosFragmentBinding;
 import com.example.lab3.ui.home.HomeViewModel;
 
 public class PedidosFragment extends Fragment {
 
     private PedidosViewModel mViewModel;
+    private PedidosFragmentBinding binding;
 
     public static PedidosFragment newInstance() {
         return new PedidosFragment();
@@ -31,9 +33,11 @@ public class PedidosFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mViewModel =
+        PedidosViewModel pedidosViewModel =
                 new ViewModelProvider(this).get(PedidosViewModel.class);
-        View root = inflater.inflate(R.layout.pedidos_fragment, container, false);
+
+        binding = PedidosFragmentBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
 
         Button b1 = root.findViewById(R.id.button);
         b1.setOnClickListener(v -> {
